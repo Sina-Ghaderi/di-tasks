@@ -1,0 +1,8 @@
+Task: gnome-clean
+Relevance: 2
+Description: Gnome Core Desktop
+ Install commonly required system utilities
+Key:
+Packages: list
+ gnome-core
+Section: user
