@@ -1,0 +1,10 @@
+Task: gnome-clean-nvidia
+Relevance: 2
+Description: Gnome Core And Nvidia Driver
+ Install commonly required system utilities
+Key:
+Packages: list
+ gnome-core
+ nvidia-driver
+ linux-headers-amd64
+Section: user
