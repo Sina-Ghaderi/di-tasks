@@ -61,6 +61,8 @@ fi
   wget -O - https://raw.githubusercontent.com/Sina-Ghaderi/clean-de/refs/heads/master/gome-clean-nvidia.desc >> /target/usr/share/tasksel/descs/debian-tasks.desc || aptfailed
   ```
 
+
+    
 Something like this:
 
 ```bash
