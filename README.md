@@ -61,7 +61,7 @@ fi
   wget -O - https://raw.githubusercontent.com/Sina-Ghaderi/clean-de/refs/heads/master/gome-clean-nvidia.desc >> /target/usr/share/tasksel/descs/debian-tasks.desc || aptfailed
   ```
 
-For Example:
+Something like this:
 
 ```bash
 if db_get pkgsel/run_tasksel && [ "$RET" = true ]; then
