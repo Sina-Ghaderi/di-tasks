@@ -11,7 +11,7 @@ In newer Debian releases (Debian 13  Trixie), tasksel is installed during the "S
 This means the package `tasksel` is not available before this step, so you cannot edit the tasksel description files prior to that.  
 
 In older Debian versions, the installer installed the `tasksel` package before the "Select and install software" step,  
-which allowed users to open a shell and manually edit the `/usr/share/tasksel/descs/debian-tasks.desc` file to customize available tasks.
+which allowed users to open a shell and manually edit the `/target/usr/share/tasksel/descs/debian-tasks.desc` file to customize available tasks.
 
 This guide adapts to the new installer behavior by injecting the custom tasksel descriptions **right before** tasksel runs during the "Select and install software" step, ensuring minimal GNOME desktop options appear correctly in tasksel tasks.
 
