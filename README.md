@@ -79,9 +79,8 @@ fi
 5.  Save (`CTRL+s`) and exit (`CTRL+x`) the editor and exit the shell with `exit` and return to the installer menu.
     
 6.  Now choose **Select and install software**.  
-    You should now see new options like `GNOME Core Desktop` or `GNOME Core Desktop and NVIDIA Driver` in tasksel menu
-        
-7.  Select your desired option and continue installation.
+    You should see new options like `GNOME Core Desktop` or `GNOME Core Desktop and NVIDIA Driver` in tasksel menu.  
+    Unselect all options except  `GNOME Core Desktop` or `GNOME Core Desktop and NVIDIA Driver`  and continue installation.
 
 ## License
 
