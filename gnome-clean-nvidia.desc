@@ -42,7 +42,7 @@ Packages: list
  pipewire-audio
  showtime
  zenity
- chromium
+ firefox-esr
  gnome-remote-desktop
  low-memory-monitor
  locales-all
