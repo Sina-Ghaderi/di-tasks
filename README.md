@@ -69,7 +69,7 @@ if db_get pkgsel/run_tasksel && [ "$RET" = true ]; then
     db_progress INFO pkgsel/progress/tasksel
     apt-install tasksel  # ensure tasksel is installed
 
-    wget -O - https://raw.githubusercontent.com/Sina-Ghaderi/clean-de/refs/heads/master/gome-clean.desc >> /target/usr/share/tasksel/descs/debian-tasks.desc
+    wget -O - https://raw.githubusercontent.com/Sina-Ghaderi/clean-de/refs/heads/master/gome-clean.desc >> /target/usr/share/tasksel/descs/debian-tasks.desc || aptfailed
 
     DEBIAN_TASKS_ONLY=1 in-target sh -c "tasksel --new-install --debconf-apt-progress='--from $tasksel_start --to $tasksel_end --logstderr'" || aptfailed
 fi
