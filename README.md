@@ -54,11 +54,11 @@ fi
 -   For minimal GNOME desktop only:
    
   ```bash
-  wget -O - https://raw.githubusercontent.com/Sina-Ghaderi/clean-de/refs/heads/master/gome-clean.desc >> /target/usr/share/tasksel/descs/debian-tasks.desc || aptfailed 
+  wget -O - https://raw.githubusercontent.com/Sina-Ghaderi/di-tasks/refs/heads/master/gome-clean.desc >> /target/usr/share/tasksel/descs/debian-tasks.desc || aptfailed 
   ```      
 -   For GNOME + NVIDIA driver:    
   ```bash
-  wget -O - https://raw.githubusercontent.com/Sina-Ghaderi/clean-de/refs/heads/master/gome-clean-nvidia.desc >> /target/usr/share/tasksel/descs/debian-tasks.desc || aptfailed
+  wget -O - https://raw.githubusercontent.com/Sina-Ghaderi/di-tasks/refs/heads/master/gnome-clean-nvidia.desc >> /target/usr/share/tasksel/descs/debian-tasks.desc || aptfailed
   ```
 
 
@@ -71,7 +71,7 @@ if db_get pkgsel/run_tasksel && [ "$RET" = true ]; then
     db_progress INFO pkgsel/progress/tasksel
     apt-install tasksel  # ensure tasksel is installed
 
-    wget -O - https://raw.githubusercontent.com/Sina-Ghaderi/clean-de/refs/heads/master/gome-clean.desc >> /target/usr/share/tasksel/descs/debian-tasks.desc || aptfailed
+    wget -O - https://raw.githubusercontent.com/Sina-Ghaderi/di-tasks/refs/heads/master/gome-clean.desc >> /target/usr/share/tasksel/descs/debian-tasks.desc || aptfailed
 
     DEBIAN_TASKS_ONLY=1 in-target sh -c "tasksel --new-install --debconf-apt-progress='--from $tasksel_start --to $tasksel_end --logstderr'" || aptfailed
 fi
