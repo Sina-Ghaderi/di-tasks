@@ -7,7 +7,7 @@ A simple way to install a clean, minimal GNOME desktop on Debian without extra s
 
 ## For Newer Debian Versions
 
-In newer Debian releases (such as Debian 13  Trixie), tasksel is installed during the "Select and install software" step of the installer itself.  
+In newer Debian releases (Debian 13  Trixie), tasksel is installed during the "Select and install software" step of the installer itself.  
 This means the package `tasksel` is not available before this step, so you cannot edit the tasksel description files prior to that.  
 
 In older Debian versions, the installer installed the `tasksel` package before the "Select and install software" step,  
