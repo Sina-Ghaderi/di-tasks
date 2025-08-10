@@ -49,7 +49,6 @@ Packages: list
  network-manager
  file-roller
  gnome-tweaks
- gnome-characters
  gnome-shell-extension-manager
  nvidia-driver
  linux-headers-amd64
