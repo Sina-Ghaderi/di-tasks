@@ -75,7 +75,7 @@ pkg_list=$(wget -O - https://raw.githubusercontent.com/Sina-Ghaderi/di-tasks/ref
 in-target sh -c "debconf-apt-progress --from $tasksel_start --to $tasksel_end --logstderr -- apt-get -q -y install --no-install-recommends -- $pkg_list" || aptfailed
 ```
 **Note:** if you want to install nvidia driver too use `gnome-clean-nvidia.list` instead of `gnome-clean.list`  
-finally, entire block should be like this: 
+Finally, entire block should be like this: 
 
 ```bash
 if db_get pkgsel/run_tasksel && [ "$RET" = true ]; then
@@ -108,7 +108,7 @@ However, since some optional dependencies and libraries are omitted, you may nee
 ### Package Lists
 We provide two package lists for your convenience:
 
-gnome-clean.list — Minimal GNOME without NVIDIA drivers
-gnome-clean-nvidia.list — Minimal GNOME with NVIDIA driver to be installed
+gnome-clean.list — Minimal GNOME without NVIDIA drivers  
+gnome-clean-nvidia.list — Minimal GNOME with NVIDIA driver to be installed  
 
 You can fork the repository and add your own packages to the lists so that your custom packages will be installed automatically during the Debian installation.
