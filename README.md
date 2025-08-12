@@ -91,8 +91,7 @@ if db_get pkgsel/run_tasksel && [ "$RET" = true ]; then
 fi
 ```
 
-After making these changes, save the file (Ctrl+O), exit nano (Ctrl+X), then exit the shell.
-Now, choose **Select and Install Software** from the installer menu and continue the installation.
+After making these changes, save the file (Ctrl+O), exit nano (Ctrl+X), then exit the shell. now, choose **Select and Install Software** from the installer menu and continue the installation.
 
 Because of the modifications, the tasksel menu will no longer appear during the **Select and Install Software** step, and the minimal GNOME packages will be installed automatically.
 
