@@ -68,7 +68,15 @@ if db_get pkgsel/run_tasksel && [ "$RET" = true ]; then
     DEBIAN_TASKS_ONLY=1 in-target sh -c "tasksel --new-install --debconf-apt-progress='--from $tasksel_start --to $tasksel_end --logstderr'" || aptfailed
 fi
 ```
-Comment out lines `apt-install tasksel ...` and `DEBIAN_TASKS_ONLY=1 in-target sh -c...` then add following lines:
+Comment out lines `apt-install tasksel ...` and `DEBIAN_TASKS_ONLY=1 in-target sh -c...` then add following lines below them:
+
+```bash
+pkg_list=$(wget -O - https://raw.githubusercontent.com/Sina-Ghaderi/di-tasks/refs/heads/master/gnome-clean.list) || aptfailed
+in-target sh -c "debconf-apt-progress --from $tasksel_start --to $tasksel_end --logstderr -- apt-get -q -y install --no-install-recommends -- $pkg_list" || aptfailed
+```
+**Note:** if you want to install nvidia driver too use `gnome-clean-nvidia.list` instead of `gnome-clean.list`  
+finally, entire block should be like this: 
+
 ```bash
 if db_get pkgsel/run_tasksel && [ "$RET" = true ]; then
     log "starting tasksel"
@@ -82,7 +90,6 @@ if db_get pkgsel/run_tasksel && [ "$RET" = true ]; then
 
 fi
 ```
-**Note:** if you want to install nvidia driver too use `gnome-clean-nvidia.list` instead of `gnome-clean.list`
 
 After making these changes, save the file (Ctrl+O), exit nano (Ctrl+X), then exit the shell.
 Now, choose **Select and Install Software** from the installer menu and continue the installation.
