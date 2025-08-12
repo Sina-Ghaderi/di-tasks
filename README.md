@@ -108,7 +108,7 @@ However, since some optional dependencies and libraries are omitted, you may nee
 ### Package Lists
 We provide two package lists for your convenience:
 
-gnome-clean.list — Minimal GNOME without NVIDIA drivers  
-gnome-clean-nvidia.list — Minimal GNOME with NVIDIA driver to be installed  
+[gnome-clean.list](https://github.com/Sina-Ghaderi/di-tasks/blob/master/gnome-clean.list) — Minimal GNOME without NVIDIA drivers  
+[gnome-clean-nvidia.list](https://github.com/Sina-Ghaderi/di-tasks/blob/master/gnome-clean-nvidia.list) — Minimal GNOME with NVIDIA driver to be installed  
 
 You can fork the repository and add your own packages to the lists so that your custom packages will be installed automatically during the Debian installation.
